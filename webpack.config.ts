@@ -3,7 +3,7 @@ import type webpack from 'webpack';
 import webpackDevServer from 'webpack-dev-server';
 
 const config: webpack.Configuration = {
-  entry: './src/index.ts',
+  entry: './src/canvas.ts',
   devServer: {
     static: {
       directory: path.join(__dirname, 'dist'),
@@ -17,6 +17,17 @@ const config: webpack.Configuration = {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/,
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          // Creates `style` nodes from JS strings
+          "style-loader",
+          // Translates CSS into CommonJS
+          "css-loader",
+          // Compiles Sass to CSS
+          "sass-loader",
+        ],
       },
     ],
   },

@@ -59,7 +59,7 @@ function init() {
   objects = [];
 
   for (let i = 0; i < 400; i++) {
-    // objects.push()
+    objects.push();
   }
 }
 

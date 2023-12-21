@@ -11,7 +11,8 @@ const mouse = {
   y: window.innerHeight / 2,
 };
 
-const COLORS = ["#2185C5", "#7ECEFD", "#FFF6E5", "#FF7F66"];
+const BG_COLOR = "#FAEED1";
+const COLORS = ["#607274", "#FAEED1", "#DED0B6", "#B2A59B"];
 
 // Event Listeners
 addEventListener("mousemove", (event) => {
@@ -66,6 +67,8 @@ function init() {
 function animate() {
   requestAnimationFrame(animate);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = BG_COLOR;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   // objects.forEach(object => {
   //  object.update()

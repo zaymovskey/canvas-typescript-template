@@ -54,7 +54,7 @@ class MyObject {
 }
 
 // Implementation
-let objects;
+let objects: MyObject[];
 function init() {
   objects = [];
 
